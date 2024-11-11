@@ -66,11 +66,6 @@ void executeLinuxPayload() {
   Keyboard.press(KEY_RETURN);
   Keyboard.releaseAll();
   delay(4500);
-  Keyboard.print(KEY_LEFT_ALT);
-  Keyboard.press(KEY_F4);
-  delay(100);
-  Keyboard.releaseAll();
-  delay(500);
 
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press(KEY_LEFT_ALT);
@@ -78,22 +73,18 @@ void executeLinuxPayload() {
   delay(100);
   Keyboard.releaseAll();
   // Open a URL in the default browser
+  delay(1000);
   Keyboard.print("xdg-open https://protohype.pythonanywhere.com/");
   Keyboard.press(KEY_RETURN);
   Keyboard.releaseAll();
-  delay(2500);
-  Keyboard.print(KEY_LEFT_ALT);
-  Keyboard.press(KEY_F4);
-  delay(100);
-  Keyboard.releaseAll();
-  delay(500);
+  delay(3500);
 
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press('t');
   delay(100);
   Keyboard.releaseAll();
-
+  delay(1000);
   // Save a file
   Keyboard.print("echo 'We can save files on your system' > tmp.txt");
   Keyboard.press(KEY_RETURN);
