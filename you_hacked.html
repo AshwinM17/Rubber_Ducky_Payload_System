@@ -1,62 +1,95 @@
-<!DOCTYPE html>
+html
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Have Been Hacked</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Background */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000;
-            color: #ff0000;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-
-        /* Text Styling */
-        .hacked-message {
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
-            animation: flicker 1.5s infinite alternate;
-        }
-
-        /* Animation */
-        @keyframes flicker {
-            0% {
-                opacity: 0.8;
-                text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>You Have Been Hacked</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #000000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                font-family: "Fira Code", "Courier New", monospace;
+                overflow: hidden;
+                background: linear-gradient(45deg, #000000, #1a1a1a);
             }
 
-            50% {
-                opacity: 0.5;
-                text-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff0000;
+            .container {
+                text-align: center;
+                animation: pulse 2s infinite;
+                background: rgba(0, 255, 0, 0.05);
+                padding: 60px;
+                border: 2px solid #0f0;
+                border-radius: 20px;
+                box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+                backdrop-filter: blur(5px);
+                max-width: 90vw;
             }
 
-            100% {
-                opacity: 1;
-                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            h1 {
+                color: #0f0;
+                font-size: clamp(2em, 8vw, 5em);
+                text-transform: uppercase;
+                text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+                margin: 0;
+                letter-spacing: 6px;
+                font-weight: 700;
             }
-        }
-    </style>
-</head>
 
-<body>
-    <div class="hacked-message">
-        You Have Been Hacked
-    </div>
-</body>
+            .skull {
+                font-size: clamp(4em, 12vw, 8em);
+                margin-bottom: 30px;
+                text-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+                animation: float 3s ease-in-out infinite;
+            }
 
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+                }
+                50% {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
+                }
+                100% {
+                    transform: scale(1);
+                    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+                }
+            }
+
+            @keyframes float {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .warning {
+                color: #0f0;
+                font-size: clamp(1em, 4vw, 1.5em);
+                margin-top: 30px;
+                text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+                letter-spacing: 2px;
+                opacity: 0.9;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="skull">💀</div>
+            <h1>System Compromised</h1>
+            <div class="warning">Your security has been breached</div>
+        </div>
+    </body>
 </html>
